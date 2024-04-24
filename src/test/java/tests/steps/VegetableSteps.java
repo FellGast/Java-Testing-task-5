@@ -3,6 +3,7 @@ package tests.steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.ru.И;
+import managers.DriverManager;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,23 +13,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class VegetableSteps {
-    private WebDriver driver;
+    DriverManager driverManager = DriverManager.getDriverManager();
+    WebDriver driver = null;
 
     @Before
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driverManager.initRemoteDriver();
+        driver = driverManager.getDriver();
 
-        String baseUrl = "http://localhost:8080/food";
-        driver.get(baseUrl);
+        // driver.get("http://149.154.71.152:8080/food");
 
         WebElement tittleProductsList = driver.findElement(By.xpath("//h5"));
         Assertions.assertEquals("Список товаров", tittleProductsList.getText(), "Не перешли на страницу");
-
-
     }
 
 

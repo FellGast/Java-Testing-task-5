@@ -5,30 +5,34 @@ import io.cucumber.java.Before;
 import io.cucumber.java.ru.И;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import managers.DriverManager;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.URI;
 import java.time.Duration;
+
+import static java.lang.System.getProperty;
 
 public class FruitSteps {
 
-    private WebDriver driver;
+    DriverManager driverManager = DriverManager.getDriverManager();
+    WebDriver driver = null;
 
     @Before
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driverManager.initRemoteDriver();
+        driver = driverManager.getDriver();
 
-        String baseUrl = "http://localhost:8080/food";
-        driver.get(baseUrl);
+        // driver.get("http://149.154.71.152:8080/food");
 
-       WebElement tittleProductsList = driver.findElement(By.xpath("//h5"));
-       Assertions.assertEquals("Список товаров", tittleProductsList.getText(), "Не перешли на страницу");
-
+        WebElement tittleProductsList = driver.findElement(By.xpath("//h5"));
+        Assertions.assertEquals("Список товаров", tittleProductsList.getText(), "Не перешли на страницу");
     }
 
     @И("выполнено нажатие на {string}")
@@ -160,6 +164,7 @@ public class FruitSteps {
 
     @After
     public void after() {
+
         driver.close();
     }
 }
