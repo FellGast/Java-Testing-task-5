@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6c1b3a2-fc80-404c-863c-86311f49e887" name="Changes" comment="1.1">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aplication.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/managers/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/managers/InitManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/managers/TestPropManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/PropConst.java" afterDir="false" />
+    <list default="true" id="b6c1b3a2-fc80-404c-863c-86311f49e887" name="Changes" comment="1.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/aplication.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/managers/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/managers/TestPropManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/TestPropManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/FruitSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/FruitSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/VegetableSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/VegetableSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/drivers/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/FellGast/IdeaProjects/first-cucumber/src/test/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/FellGast/IdeaProjects/first-project",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources" />
@@ -78,11 +76,11 @@
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources\features" />
-      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\java\tests\steps" />
-      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources\drivers" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main\resources" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main" />
+      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources" />
+      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources\features" />
+      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\java\tests\steps" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="managers" />
@@ -178,8 +176,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: fruit" />
-        <item itemvalue="Cucumber Java.Feature: vegetable" />
         <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Feature: vegetable" />
         <item itemvalue="JUnit.SecondTest" />
         <item itemvalue="JUnit.FirstTest" />
       </list>
@@ -215,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713535411558</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1.2">
+      <created>1713972855318</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713972855318</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,18 +237,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.0" />
     <MESSAGE value="1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1" />
+    <MESSAGE value="1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.2" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/managers/DriverManager.java</url>
-          <line>156</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="managers.TestPropManager" memberName="properties" />

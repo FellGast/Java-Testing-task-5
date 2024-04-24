@@ -29,7 +29,7 @@ public class FruitSteps {
         //driverManager.initRemoteDriver();
         driver = driverManager.getDriver();
 
-        // driver.get("http://149.154.71.152:8080/food");
+        driver.get("http://149.154.71.152:8080/food");
 
         WebElement tittleProductsList = driver.findElement(By.xpath("//h5"));
         Assertions.assertEquals("Список товаров", tittleProductsList.getText(), "Не перешли на страницу");
@@ -164,7 +164,7 @@ public class FruitSteps {
 
     @After
     public void after() {
-
-        driver.close();
+        driver.get("http://149.154.71.152:8080/food");
+        //driver.close();
     }
 }

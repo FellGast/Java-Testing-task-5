@@ -40,7 +40,7 @@ public class DriverManager {
      *
      * @see TestPropManager#getTestPropManager()
      */
-    //private final TestPropManager props = TestPropManager.getTestPropManager();
+    private final TestPropManager props = TestPropManager.getTestPropManager();
 
 
     /**
@@ -93,14 +93,25 @@ public class DriverManager {
      * Метод инициализирующий веб драйвер
      */
     private void initDriver() {
-        initRemoteDriver();
+        if(props.getProperty("type.driver").equals("remote")) {
+            initRemoteDriver();
+        }
+        else {
+            if (OS.isFamilyWindows()) {
+                initDriverWindowsOsFamily();
+            } else if (OS.isFamilyMac()) {
+                initDriverMacOsFamily();
+            } else if (OS.isFamilyUnix()) {
+                initDriverUnixOsFamily();
+            }
+        }
     }
 
     /**
      * Метод инициализирующий веб драйвер под ОС семейства Windows
      */
     private void initDriverWindowsOsFamily() {
-        //initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_WINDOWS, PropConst.PATH_CHROME_DRIVER_WINDOWS);
+        initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_WINDOWS, PropConst.PATH_CHROME_DRIVER_WINDOWS);
     }
 
 
@@ -108,39 +119,40 @@ public class DriverManager {
      * Метод инициализирующий веб драйвер под ОС семейства Mac
      */
     private void initDriverMacOsFamily() {
-       // initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_MAC, PropConst.PATH_CHROME_DRIVER_MAC);
+       initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_MAC, PropConst.PATH_CHROME_DRIVER_MAC);
     }
 
     /**
      * Метод инициализирующий веб драйвер под ОС семейства Unix
      */
     private void initDriverUnixOsFamily() {
-       // initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_UNIX, PropConst.PATH_CHROME_DRIVER_UNIX);
+       initDriverAnyOsFamily(PropConst.PATH_GECKO_DRIVER_UNIX, PropConst.PATH_CHROME_DRIVER_UNIX);
     }
 
-/*
+
     /**
      * Метод инициализирующий веб драйвер под любую ОС
      *
      * @param gecko  - переменная firefox из файла application.properties в классе {@link PropConst}
      * @param chrome - переменная chrome из файла application.properties в классе {@link PropConst}
      */
-    /*
+
     private void initDriverAnyOsFamily(String gecko, String chrome) {
         switch (props.getProperty(PropConst.TYPE_BROWSER)) {
             case "firefox":
                 System.setProperty("webdriver.gecko.driver", props.getProperty(gecko));
                 driver = new FirefoxDriver();
+                driver.manage().window().maximize();
                 break;
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", props.getProperty(chrome));
                 driver = new ChromeDriver();
+                driver.manage().window().maximize();
                 break;
             default:
                 Assertions.fail("Типа браузера '" + props.getProperty(PropConst.TYPE_BROWSER) + "' не существует во фреймворке");
         }
     }
-*/
 
     public void initRemoteDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();

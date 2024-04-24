@@ -1,8 +1,14 @@
 package managers;
 
+import io.cucumber.core.cli.Main;
+import org.apache.commons.exec.OS;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 /**
@@ -59,8 +65,9 @@ public class TestPropManager {
      */
     private void loadApplicationProperties() {
         try {
-            //properties.load(new FileInputStream(new File("src/main/resources/application.properties")));
-            properties.load(new FileInputStream(new File(getClass().getClassLoader().getResource("src/main/resources/application.properties").getFile())));
+            properties.load(new FileInputStream(
+                    new File("src/main/resources/" +
+                            System.getProperty("propFile", "application") + ".properties")));
         } catch (IOException e) {
             e.printStackTrace();
         }
