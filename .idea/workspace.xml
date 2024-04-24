@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6c1b3a2-fc80-404c-863c-86311f49e887" name="Changes" comment="1.2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/drivers/geckodriver-x64.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/aplication.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/managers/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/managers/TestPropManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/TestPropManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/FruitSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/FruitSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/steps/VegetableSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/steps/VegetableSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/drivers/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/FellGast/IdeaProjects/first-project",
+    "last_opened_file_path": "C:/Users/FellGast/IdeaProjects/cucumber-example-full-stack-aft",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -76,11 +73,11 @@
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main\resources\drivers" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main\resources" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\main" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources" />
       <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\resources\features" />
-      <recent name="C:\Users\FellGast\IdeaProjects\first-cucumber\src\test\java\tests\steps" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="managers" />
@@ -90,7 +87,7 @@
       <recent name="tests.runner" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: fruit">
+  <component name="RunManager" selected="JUnit.TestRunner">
     <configuration name="Feature: fruit" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/fruit.feature" />
@@ -175,8 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: fruit" />
         <item itemvalue="JUnit.TestRunner" />
+        <item itemvalue="Cucumber Java.Feature: fruit" />
         <item itemvalue="Cucumber Java.Feature: vegetable" />
         <item itemvalue="JUnit.SecondTest" />
         <item itemvalue="JUnit.FirstTest" />
@@ -220,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713972855318</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.2">
+      <created>1713984880603</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713984880603</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.2">
+      <created>1713985060746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713985060746</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

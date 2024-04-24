@@ -157,8 +157,10 @@ public class DriverManager {
     public void initRemoteDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("browserVersion", "109.0");
+        capabilities.setBrowserName(props.getProperty("type.browser"));
+        capabilities.setVersion("109.0");
+        //capabilities.setCapability("browserName", "chrome");
+        //capabilities.setCapability("browserVersion", "109.0");
 
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
